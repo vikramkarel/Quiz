@@ -1,0 +1,78 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutSuperAdmin.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            margin-left: 20px;
+            margin-right: 20px;
+            font-size: 1.1rem; /* Increase font size slightly */
+        }
+
+        .navbar-nav .nav-item .nav-link img {
+            margin-right: 0.5rem;
+        }
+
+        .navbar-nav {
+            align-items: center;
+        }
+
+        .vh {
+            height: 70vh;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">PowerQuiz</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Logout</a>
+                        </li>
+                        <div >
+                            <a asp-controller="login" asp-action="QuizProfile" role="button">
+                                Profile<img src="https://picsum.photos/400/500" alt="User Image" width="40" height="40" class="rounded-circle">
+                            </a>
+                        </div>
+                        
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <Section class=" d-flex flex-row justify-content-around align-items-center vh">
+            <div>
+                <h1>Welcome to Quiz Page</h1>
+                <div class="d-grid gap-3 d-md-block">
+                    <button class="btn btn-primary" type="button">Available quiz</button>
+                    <button class="btn btn-primary" type="button">Your Response</button>
+                </div>
+            </div>
+            <div>
+                <img src="https://img.freepik.com/free-vector/kids-playing-ipad-with-speech-bubble_1308-100969.jpg?size=626&ext=jpg&ga=GA1.1.1100768878.1715929037&semt=ais_user">
+            </div>
+        </Section>
+    </header>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
